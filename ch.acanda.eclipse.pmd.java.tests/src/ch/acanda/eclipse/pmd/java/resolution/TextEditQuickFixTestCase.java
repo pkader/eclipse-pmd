@@ -134,7 +134,7 @@ public abstract class TextEditQuickFixTestCase<T extends ASTRewriteQuickFix<? ex
         final ASTParser astParser = ASTParser.newParser(AST.JLS4);
         astParser.setKind(ASTParser.K_COMPILATION_UNIT);
         astParser.setSource(document.get().toCharArray());
-        astParser.setCompilerOptions(ImmutableMap.<String, String>builder().put(JavaCore.COMPILER_SOURCE, "1.7").build());
+        astParser.setCompilerOptions(ImmutableMap.<String, String>builder().put(JavaCore.COMPILER_SOURCE, "1.8").build());
         final CompilationUnit ast = (CompilationUnit) astParser.createAST(null);
         ast.recordModifications();
         return ast;
